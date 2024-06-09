@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 9093
   ssl:
     key-store-type: PKCS12
     key-store: classpath:keys/MyServer.pfx
@@ -7,7 +7,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/addresspg
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/cartpg
     username: root
     password: root@123
     driver-class-name: com.mysql.cj.jdbc.Driver

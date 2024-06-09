@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 9095
   ssl:
     key-store-type: PKCS12
     key-store: classpath:keys/MyServer.pfx
