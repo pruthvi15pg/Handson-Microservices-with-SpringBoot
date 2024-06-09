@@ -1,6 +1,9 @@
 server:
   port: 9091
-
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keys/MyServer.pfx
+    key-store-password: pg@123
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

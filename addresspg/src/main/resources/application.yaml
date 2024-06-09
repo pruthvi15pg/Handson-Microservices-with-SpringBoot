@@ -1,5 +1,9 @@
 server:
   port: 9080
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keys/MyServer.pfx
+    key-store-password: pg@123
 
 spring:
   datasource:
