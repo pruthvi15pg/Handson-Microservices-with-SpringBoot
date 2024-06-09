@@ -1,0 +1,50 @@
+server:
+  port: 9091
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keys/MyServer.pfx
+    key-store-password: pg@123
+
+
+
+#   trust-store:
+#      type: JKS
+#      location: classpath:client.truststore.jks
+#      password: pg@123
+#   key-store: classpath:server.keystore.jks
+#   key-store-password: pg@123
+#   key-password: pg@123
+#   enabled: true
+#   key-alias: localhost
+#   ssl.endpoint.identification.algorithm:
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/orderpg
+    username: root
+    password: root@123
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: openssl-service
+
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#  service-url:
+#      defaultZone:${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+#  instance:
+#    prefer-ip-address: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
