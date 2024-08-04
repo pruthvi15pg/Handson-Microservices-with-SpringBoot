@@ -1,0 +1,24 @@
+-- -- schema.sql
+--
+-- -- Create schema if it doesn't exist
+-- CREATE SCHEMA IF NOT EXISTS pg;
+-- DROP TABLE IF EXISTS pg.controller_master;
+-- DROP TABLE IF EXISTS pg.exists;
+-- COMMIT ;
+--
+-- -- Create table controller_master in the pg schema
+-- CREATE TABLE pg.controller_master (
+--                                       id SERIAL PRIMARY KEY,
+--                                       name VARCHAR(255) NOT NULL,
+--                                       description TEXT,
+--                                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
+--
+-- -- Create table config in the pg schema
+-- CREATE TABLE pg.config (
+--                            id SERIAL PRIMARY KEY,
+--                            key VARCHAR(255) NOT NULL UNIQUE,
+--                            value TEXT NOT NULL,
+--                            description TEXT,
+--                            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
